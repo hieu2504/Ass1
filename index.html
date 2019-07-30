@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.js">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <p>marketing</p>
+            </div>
+            <ul class="login">
+                <li class="login__item"><a href="#" class="login__link"> Sign in</a></li>
+                <li class="or"> <span>Or</span> </li>
+                <li class="login__item"><a href="#" class="login__link">Sign up</a></li>
+            </ul>
+        </div>
+
+
+    </header>
+    <section class="banner">
+        <div class="container">
+            <h2 class="banner__title">Awesome Slogan of Marketing</h2>
+            <p class="banner__desc">Sub-heading with mentioning your awesome services will be appear here</p>
+            <form action="" class="form-newsletter">
+                <input type="text" class="form-newsletter__input" placeholder="Enter your email address">
+                <button class="form-newsletter__btn">Sing Up</button>
+            </form>
+
+        </div>
+    </section>
+    <section class="design">
+        <div class="container">
+            <ul>
+                <li>
+                        <img class="design__img" src="images/labtop.png" alt="">
+                </li>
+                <li>
+                        <div id="main">
+
+                                <div class="mosaic-slideshow">
+                                    <table>
+                                        <tr>
+                                            <td><img src="images/pre.png" width="100" height="100" onclick="pre()"></td>
+                                            <td><img src="images/a1.jpg" id="anh"></td>
+                                            <td><img src="images/next.png" width="100" height="100" onclick="next()"></td>
+                
+                                        </tr>
+                                    </table>
+                                </div>
+                
+                            </div>
+                </li>
+            </ul>
+            
+            
+
+            <h2 class="design__heading">Awesome Web Design Services</h2>
+            <p class="design__meta">Having hands on experience in creating innovative designs, I do offer design
+                solutions which harness the
+                new possibilities of web based
+                <br> communication, internet presence and current technology trends.
+            </p>
+            <div class="design__btn">
+                <button><a href="#">Leam More</a></button>
+            </div>
+
+        </div>
+    </section>
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="about--us">
+                        <h2 class="about--us__heading">About us</h2>
+                        <p>Having hands on experience in creating innovative designs, I do offer design
+                            solutions which harness the new possibilities of web based communication,
+                            internet presence and current technology trends. </p>
+                        <p>
+                            I do specialize in all aspects of website designing, theme development,
+                            designing custom home pages and landing pages..
+                        </p>
+                        <button class="about--us__btn"><a href="#">Leam More</a></button>
+                    </div>
+
+
+                </div>
+                <div class="col">
+                    <div class="about__img"><img src="images/about.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>Copyright 2012. All Rights Reserved by Theme Designer</p>
+            <p>Designed by Theme Designer</p>
+        </div>
+    </footer>
+</body>
+<script>
+        var manganh = [];
+        manganh[0] = "images/a1.jpg"
+        manganh[1] = "images/a2.jpg"
+        manganh[2] = "images/a3.jpg"
+        var i = 0
+        function next() {
+            i++;
+            if (i == manganh.length)
+                i = 0;
+            document.getElementById("anh").src = manganh[i];
+        }
+        function pre() {
+            i--;
+            if (i == -1) {
+                i = manganh.length - 1
+            }
+            document.getElementById("anh").src = manganh[i];
+        }
+        onload=function (){
+                            auto = setInterval(function () {
+                                next()
+                            }, 2000);
+                            
+                        }
+    </script>
+
+</html>
